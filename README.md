@@ -1,6 +1,6 @@
-#  Projet 9 — Analyse des ventes d'une librairie en ligne avec Python
+# Projet 9 : Analyse des ventes d'une librairie en ligne (Python)
  
-> **Formation Data Analyst – OpenClassrooms**
+> **Formation Data Analyst - OpenClassrooms**
  
 ---
  
@@ -34,11 +34,17 @@ L'objectif : comprendre finement le comportement des clients pour orienter la st
 | Test | Objectif |
 |------|----------|
 | **Chi-2** | Lien entre le genre du client et les catégories de livres achetées |
-| **ANOVA** | Impact de l'âge sur le montant total des achats |
-| **Pearson / Spearman** | Relation entre l'âge, la fréquence d'achat et le panier moyen |
+| **Kruskal-Wallis** (après tests de Shapiro-Wilk et de Levene) | Lien entre l'âge et le montant des achats |
+| **Spearman** | Relation entre l'âge et la fréquence d'achat |
  
 ---
  
+##  Résultats
+- **12 M€** de chiffre d'affaires sur environ 680 000 ventes réelles (transactions de test exclues)
+- **4 clients professionnels** concentrent 7,3 % du CA, près d'un million d'euros (indice de Gini : 0,44)
+- Un paradoxe générationnel : les seniors achètent souvent de petits paniers, les jeunes rarement mais de gros paniers, ce qu'explique la catégorie de livres achetée (η² = 0,111)
+---
+
 ##  Stack technique
  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -53,15 +59,15 @@ L'objectif : comprendre finement le comportement des clients pour orienter la st
 | **Manipulation de données** | `Pandas` |
 | **Visualisation** | `Matplotlib`, `Seaborn` |
 | **Statistiques** | `SciPy` |
-| **Techniques** | Statistiques descriptives, Tests Chi-2 / ANOVA / Pearson, Analyse bivariée, Data Cleaning |
+| **Techniques** | Statistiques descriptives, courbe de Lorenz et indice de Gini, tests Chi-2 / Kruskal-Wallis / Spearman, analyse bivariée, data cleaning |
  
 ---
  
 ##  Structure du projet
  
 ```
- DA-Projet9-Analyse-ventes-librairie-avec-Python/
- ┣ 📓 notebook   # Notebook principal
+ DA-Projet9-Analyse-Ventes-Librairie-Python/
+ ┣ 📓 notebooks/ # Notebook principal
  ┣ 📂 data-raw/  # Données sources
  ┣ 📂 reports/   # Présentation avec graphiques
  ┗ 📄 README.md
@@ -70,4 +76,6 @@ L'objectif : comprendre finement le comportement des clients pour orienter la st
 <img src="images/Capture d'écran 2026-04-03 112731.png" width="450px"><img src="images/Capture d'écran 2026-04-03 113013.png" width="450px">
 ---
  
-*Projet réalisé dans le cadre de la formation [Data Analyst – OpenClassrooms](https://openclassrooms.com/fr/paths/324-data-analyst)*
+📂 Dossier complet sur mon portfolio : [remydaura.github.io/p9.html](https://remydaura.github.io/p9.html)
+
+*Projet réalisé dans le cadre de la formation [Data Analyst - OpenClassrooms](https://openclassrooms.com/fr/paths/324-data-analyst)*
